@@ -1,15 +1,17 @@
 <template>
-    <div class="card card-dash bg-primary-content w-full">
+    <div class="card card-dash bg-base w-full">
         <div class="card-body">
             <h2 class="card-title">Consignes</h2>
             <p>{{ id }}</p>
             <p>{{ globalObjective }}</p>
-            <ul class="list bg-base-100 rounded-box">
-                <li class="list-row" v-for="goal in props.stepGoals">
+            <ul class="list bg-base rounded-box" >
+                <li class="list-row" v-for="goal in props.stepGoals" v-if="stepGoals">
                     <div>{{ goal.description }}</div>
                     <input type="checkbox" checked="checked" class="checkbox checkbox-primary" v-model="goal.isCompleted" @click="clicked(goal.description)">
                 </li>
+                <li v-else> rien à voir ici</li>
             </ul>
+
 
             <div class="card-actions justify-end">
                 <button class="btn btn-primary" @click="afficher">Afficher step goals</button>
@@ -43,7 +45,7 @@ const emit = defineEmits({
         } else {
             console.log('id is required');
             console.warn('C\'est la catastrophe !!!!!!');
-            console.error('ON A PAS DE ID Dans le event suppr');
+            console.error('ON A PAS DE ID Dans le event click');
             return false;
         }
     },

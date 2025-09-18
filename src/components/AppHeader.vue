@@ -17,11 +17,8 @@
           <li class="rounded-box">
             <router-link to="/exercice" class="hover:text-primary">Exercice</router-link>
           </li>
-          <li class="rounded-box">
-            <a href="#" class="hover:text-primary">Services</a>
-          </li>
-          <li class="rounded-box">
-            <a href="#" class="hover:text-primary">Contact</a>
+          <li>
+            <router-link to="/contact" class="hover:text-primary">Contact</router-link>
           </li>
         </ul>
       </nav>
@@ -30,36 +27,20 @@
       <div class="flex-none lg:hidden">
         <div class="dropdown dropdown-end">
           <label tabindex="0" class="btn btn-ghost lg:hidden">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="h-6 w-6"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M4 6h16M4 12h8m-8 6h16"
-              />
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" />
             </svg>
           </label>
-          <ul
-            tabindex="0"
-            class="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52"
-          >
-             <li class="rounded-box">
-            <router-link to="/" class="hover:text-primary">Accueil</router-link>
-          </li>
-          <li class="rounded-box">
-            <router-link to="/exercice" class="hover:text-primary">Exercice</router-link>
-          </li>
-            <li>
-              <a href="#" class="hover:text-primary">Services</a>
+          <ul tabindex="0" class="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
+            <li class="rounded-box">
+              <router-link to="/" class="hover:text-primary">Accueil</router-link>
+            </li>
+            <li class="rounded-box">
+              <router-link to="/exercice" class="hover:text-primary">Exercice</router-link>
             </li>
             <li>
-              <a href="#" class="hover:text-primary">Contact</a>
+              <router-link to="/contact" class="hover:text-primary">Contact</router-link>
             </li>
           </ul>
         </div>
@@ -69,7 +50,7 @@
 </template>
 
 <script setup>
-import{RouterLink} from "vue-router";
+import { RouterLink } from "vue-router";
 </script>
 
 <style scoped>

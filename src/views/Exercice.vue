@@ -52,7 +52,7 @@ const consignesExo = ref({
 //toggle d'affichage du stepGoals
 function afficher(step) {
     const toggleStep = consignesExo.value.stepGoals.find((element) => element.description === step);
-    toggleStep.isCompleted = !toggleStep.isCompleted;
+    toggleStep.stepGoals = !toggleStep.stepGoals;
 
     console.log(toggleStep, "oui c'est bon")
 }
